@@ -429,8 +429,8 @@ header{
   column-gap: .5rem; /* For horizontal spacing */
 }
 .explore__perfil{
-  width: 30px;
-  border-radius: 50%;
+  width: 60%;
+  border-radius: 0;
 }
 .explore__name{
   font-size: var(--small-font-size); /* Small font size */
