@@ -17,13 +17,12 @@ if(navClose){
     })
 }
 
-
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
 const linkAction = () =>{
     const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
+    
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
@@ -32,7 +31,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*=============== ADD BLUR TO HEADER ===============*/
 const blurHeader = () =>{
     const header = document.getElementById('header')
-    // Add a class if the bottom offset is greater than 50 of the viewport
+    
     this.scrollY >= 50 ? header.classList.add('blur-header') 
                        : header.classList.remove('blur-header')
 }
@@ -41,7 +40,7 @@ window.addEventListener('scroll', blurHeader)
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+    
 	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
 						: scrollUp.classList.remove('show-scroll')
 }
@@ -74,7 +73,6 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 3000,
     delay: 400,
-   // reset: true // animation repeat
 })
 
 sr.reveal(`.home__data, .explore__data, .explore__user, .footer__container`)
@@ -82,3 +80,15 @@ sr.reveal(`.home__card`, {delay: 600, distance: '100px', interval: 100})
 sr.reveal(`.about__data, .join__image`, {origin: 'right'})
 sr.reveal(`.about__image, join__data`, {origin: 'left'})
 sr.reveal(`.popular__card`, {interval: 200})
+
+
+/* =============== JOIN ============ */
+
+function showAlert() {
+    alert("Você foi inscrito em nosso boletim de notícias!");
+    
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+  
+    event.preventDefault();
+  }
